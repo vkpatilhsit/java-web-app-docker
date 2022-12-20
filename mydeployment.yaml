@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: javawebappcontainer
-        image: vkpatilhsit/java-web-application:IMAGE_TAG
+        image: vkpatilhsit/java-web-application
         ports:
         - containerPort: 8080
         resources:
