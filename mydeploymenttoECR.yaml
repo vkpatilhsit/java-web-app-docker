@@ -4,7 +4,7 @@ metadata:
   name: javawebappdeployment
   namespace: mynamespace
 spec:
-  replicas: 2
+  replicas: 1
   revisionHistoryLimit: 10
   strategy:
     type: RollingUpdate
