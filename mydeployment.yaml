@@ -43,7 +43,7 @@ metadata:
  name: javawebappsvc
  namespace: mynamespace
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: javawebapp
   ports:
