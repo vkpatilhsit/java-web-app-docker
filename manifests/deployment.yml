@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vkpatilhsitjavawebappdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vkpatilhsitjavawebappdocker
+  template:
+    metadata:
+      labels:
+        app: vkpatilhsitjavawebappdocker 
+    spec:
+      containers:
+        - name: vkpatilhsitjavawebappdocker 
+          image: vijayakumarcontainerregistry.azurecr.io/vkpatilhsitjavawebappdocker
+          ports:
+          - containerPort: 8080
