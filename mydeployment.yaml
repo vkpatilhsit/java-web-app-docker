@@ -22,13 +22,6 @@ spec:
         image: vkpatilhsit/java-web-application:latest
         ports:
         - containerPort: 8080
-        resources:
-          requests:
-            cpu: 200mi
-            memory: 256Mi
-          limits:
-            cpu: 256mi
-            memory: 512Mi
         livenessProbe:
           httpGet:
             path: /java-web-app
