@@ -43,7 +43,7 @@ metadata:
  name: javawebappsvc
  namespace: mynamespace
 spec:
-  type: ClusterIP
+  type: Nodeport
   selector:
     app: javawebapp
   ports:
