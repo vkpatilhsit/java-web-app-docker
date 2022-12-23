@@ -23,7 +23,9 @@ variables:
 
   # Name of the new namespace being created to deploy the PR changes.
   k8sNamespaceForPR: 'review-app-$(System.PullRequest.PullRequestId)'
-
+pool:
+    vmImage: $(vmImageName)
+    
 stages:
 - stage: Build
   displayName: Build stage
