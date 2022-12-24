@@ -1,10 +1,9 @@
 ---
 apiVersion: v1
-kind: ReplicationController
+kind: Deployment
 metadata:
   labels:
     name: javawebapp
-  name: java-controller
 spec:
   replicas: 1
   template:
@@ -13,7 +12,7 @@ spec:
         name: javawebapp
     spec:
       containers:
-      - image: dockerhandson/java-web-app
+      - image: vkpatilhsit/azure-java-web-app:32
         name: javawebapp
         ports:
         - name: javawebapp
@@ -27,7 +26,7 @@ metadata:
     name: javawebapp
   name: javawebapp
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 8080
       targetPort: 8080
