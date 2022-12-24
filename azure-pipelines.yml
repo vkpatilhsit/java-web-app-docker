@@ -54,3 +54,14 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+- stage: DeployToKubernetes
+  displayName: Deploy stage
+  jobs:
+  - job: Deploy
+    displayName: Deploy
+    - task: KubernetesManifest@0
+      inputs:
+        action: 'deploy'
+        kubernetesServiceConnection: 'vijayakumarakscluster-default-1706'
+        namespace: 'mynamespace'
+        manifests: '**/mydeployment.yaml'
