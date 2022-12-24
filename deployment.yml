@@ -16,3 +16,22 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: javaweabppingressrule
+  namespace: test-ns
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: javawebapp.eccentricweb.in
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: javawebappsvc
+            port:
+              number: 80       
