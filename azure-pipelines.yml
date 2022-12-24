@@ -54,6 +54,12 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+- stage: Copy Manifests
+  displayName: Copy Manifests
+  jobs:
+  - job: Copy
+    displayName: Copy
+              
 - stage: DeployToKubernetes
   displayName: Deploy stage
   jobs:
