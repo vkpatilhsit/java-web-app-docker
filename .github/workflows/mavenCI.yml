@@ -37,7 +37,7 @@ jobs:
       name: Build & push Docker image
       with:
         image: vkpatilhsit/githubactionrepo
-       # tags: v1, latest
+        tags: latest
         registry: docker.io
        # dockerfile: Dockerfile.ci
        # username: ${{ secrets.DOCKER_USERNAME }}
